@@ -21,6 +21,8 @@
     <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"
       alt="MIT License" />
   </a>
+  
+  ![build](https://github.com/rasyidf/uWriter/workflows/WPF%20.NET%20Core/badge.svg)
 </div>
 
 <div align="center">
