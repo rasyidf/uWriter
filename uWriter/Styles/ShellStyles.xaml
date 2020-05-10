@@ -1,0 +1,293 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:templateSelectors="clr-namespace:uWriter.TemplateSelectors">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Clean/Clean.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/HamburgerMenuTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <system:Double x:Key="HamburgerMenuSelectionIndicatorThemeWidth">5</system:Double>
+    <system:Double x:Key="HamburgerMenuSelectionIndicatorThemeHeight">32</system:Double>
+
+    <Style x:Key="FocusVisualStyle" TargetType="{x:Type Control}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+
+                    <Rectangle
+                        SnapsToDevicePixels="True"
+                        Stroke="{DynamicResource MahApps.Brushes.Badged.Background}"
+                        StrokeThickness=".6"
+                        UseLayoutRounding="True" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource MahApps.Styles.Button}" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{DynamicResource MahApps.Brushes.Accent3}" />
+        <Setter Property="controls:ControlsHelper.FocusBorderThickness" Value="2" />
+    </Style>
+    <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle
+                        SnapsToDevicePixels="true"
+                        Stroke="{DynamicResource MahApps.Brushes.Accent3}"
+                        StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="MyCleanWindowStyle"
+        BasedOn="{StaticResource MahApps.Styles.MetroWindow.Clean}"
+        TargetType="{x:Type controls:MetroWindow}" />
+
+    <DropShadowEffect
+        x:Key="DropShadowHeaderStyle"
+        BlurRadius="4"
+        Direction="270"
+        Opacity="0.23"
+        ShadowDepth="1"
+        Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
+
+    <DropShadowEffect
+        x:Key="DropShadowHeaderStyle2"
+        BlurRadius="3"
+        Direction="270"
+        Opacity="0.5"
+        RenderingBias="Quality"
+        ShadowDepth="1"
+        Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
+    <!--  This is the template for all menu items. In this sample we use the glyph items.  -->
+    <DataTemplate x:Key="HamburgerMenuItem" DataType="{x:Type controls:HamburgerMenuGlyphItem}">
+        <Grid Height="36">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="36" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Focusable="False"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="16"
+                Text="{Binding Glyph}" />
+            <TextBlock
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Text="{Binding Label}" />
+        </Grid>
+    </DataTemplate>
+
+    <!--  This is the template for all option menu items.  -->
+    <DataTemplate x:Key="HamburgerOptionsMenuItem" DataType="{x:Type controls:HamburgerMenuGlyphItem}">
+        <Grid Height="36">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="36" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ContentControl
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="{Binding Glyph}"
+                Focusable="False"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="16"
+                IsTabStop="False" />
+            <TextBlock
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Text="{Binding Label}" />
+        </Grid>
+    </DataTemplate>
+
+    <ObjectDataProvider
+        x:Key="DisplayModeEnumValues"
+        MethodName="GetValues"
+        ObjectType="{x:Type controls:SplitViewDisplayMode}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="controls:SplitViewDisplayMode" />
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <ObjectDataProvider
+        x:Key="VisibilityEnumValues"
+        MethodName="GetValues"
+        ObjectType="{x:Type Visibility}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="Visibility" />
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <Style
+        x:Key="HamburgerMenuCreatorsItemStyle"
+        BasedOn="{StaticResource MahApps.Styles.ListBoxItem.HamburgerMenuItem}"
+        TargetType="{x:Type ListBoxItem}">
+        <Setter Property="controls:ItemHelper.ActiveSelectionBackgroundBrush" Value="Transparent" />
+        <Setter Property="controls:ItemHelper.ActiveSelectionForegroundBrush" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
+        <Setter Property="controls:ItemHelper.DisabledForegroundBrush" Value="{DynamicResource MahApps.Brushes.Gray}" />
+        <Setter Property="controls:ItemHelper.DisabledSelectedBackgroundBrush" Value="Transparent" />
+        <Setter Property="controls:ItemHelper.DisabledSelectedForegroundBrush" Value="{DynamicResource MahApps.Brushes.Gray}" />
+        <Setter Property="controls:ItemHelper.HoverBackgroundBrush" Value="{DynamicResource MahApps.Brushes.Gray9}" />
+        <Setter Property="controls:ItemHelper.HoverSelectedBackgroundBrush" Value="{DynamicResource MahApps.Brushes.Gray9}" />
+        <Setter Property="controls:ItemHelper.SelectedBackgroundBrush" Value="Transparent" />
+        <Setter Property="controls:ItemHelper.SelectedForegroundBrush" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
+    </Style>
+
+    <Style
+        x:Key="HamburgerMenuCreatorsStyle"
+        BasedOn="{StaticResource {x:Type controls:HamburgerMenu}}"
+        TargetType="{x:Type controls:HamburgerMenu}">
+        <Setter Property="ItemContainerStyle" Value="{StaticResource HamburgerMenuCreatorsItemStyle}" />
+        <Setter Property="OptionsItemContainerStyle" Value="{StaticResource HamburgerMenuCreatorsItemStyle}" />
+        <Setter Property="PaneBackground" Value="{DynamicResource MahApps.Brushes.Gray10}" />
+        <Setter Property="PaneForeground" Value="{DynamicResource MahApps.Brushes.Text}" />
+        <Setter Property="ShowSelectionIndicator" Value="True" />
+    </Style>
+
+    <templateSelectors:MenuItemTemplateSelector x:Key="MenuItemTemplateSelector">
+        <templateSelectors:MenuItemTemplateSelector.GlyphDataTemplate>
+            <DataTemplate DataType="{x:Type controls:HamburgerMenuGlyphItem}">
+                <Grid Height="36">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="16"
+                        Text="{Binding Glyph}" />
+                    <TextBlock
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Text="{Binding Label}" />
+                </Grid>
+            </DataTemplate>
+        </templateSelectors:MenuItemTemplateSelector.GlyphDataTemplate>
+        <templateSelectors:MenuItemTemplateSelector.ImageDataTemplate>
+            <DataTemplate DataType="{x:Type controls:HamburgerMenuImageItem}">
+                <Grid Height="36">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Ellipse
+                        Grid.Column="0"
+                        Width="24"
+                        Height="24"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="{Binding Thumbnail}" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Text="{Binding Label}" />
+                </Grid>
+            </DataTemplate>
+        </templateSelectors:MenuItemTemplateSelector.ImageDataTemplate>
+    </templateSelectors:MenuItemTemplateSelector>
+    <Style
+        x:Key="MahApps.Styles.Button.Hamburger"
+        BasedOn="{StaticResource MahApps.Styles.Button.Hamburger}"
+        TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid Background="Transparent">
+                        <Grid
+                            x:Name="PART_Background"
+                            Background="{TemplateBinding Background}"
+                            Opacity="0" />
+                        <ContentPresenter
+                            x:Name="PART_ContentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Opacity="0.75"
+                            RecognizesAccessKey="{TemplateBinding controls:ControlsHelper.RecognizesAccessKey}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="Opacity" Value="0.3" />
+                            <Setter TargetName="PART_ContentPresenter" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_Background" Property="Opacity" Value="0" />
+                            <Setter TargetName="PART_ContentPresenter" Property="Opacity" Value="0.75" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#ADADAD" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
+    <ControlTemplate x:Key="MahApps.Templates.HamburgerMenuItem.FocusVisual">
+        <Rectangle
+            SnapsToDevicePixels="True"
+            Stroke="{DynamicResource MahApps.Brushes.Accent2}"
+            StrokeThickness=".6"
+            UseLayoutRounding="True" />
+    </ControlTemplate>
+    <DataTemplate x:Key="HamburgerMenuHeaderStyle">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock
+                Margin="{StaticResource MediumLeftMargin}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
+                Text="uWriter" />
+            <Border
+                Width="Auto"
+                Height="Auto"
+                Margin="4,2,0,0"
+                Padding="3"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Background="{DynamicResource MahApps.Brushes.Badged.Background}"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                CornerRadius="3">
+                <TextBlock
+                    FontSize="9"
+                    Foreground="{DynamicResource MahApps.Brushes.Badged.Foreground}"
+                    Text="BETA" />
+            </Border>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="HamburgerButtonStyle">
+        <TextBlock
+            FontFamily="Segoe MDL2 Assets"
+            FontSize="14"
+            Foreground="{DynamicResource MahApps.Brushes.Button.Flat.Foreground}"
+            Text="&#xE700;" />
+    </DataTemplate>
+</ResourceDictionary>
