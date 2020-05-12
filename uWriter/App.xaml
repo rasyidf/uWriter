@@ -2,6 +2,7 @@
     x:Class="uWriter.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:con="clr-namespace:uWriter.Converters"
     xmlns:prism="http://prismlibrary.com/"
     DispatcherUnhandledException="OnDispatcherUnhandledException"
     Exit="OnExit">
@@ -20,14 +21,11 @@
                 <!--  Accent and AppTheme setting  -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                <ResourceDictionary Source="/Styles/ShellStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <DropShadowEffect
-                x:Key="DropShadowHeaderStyle"
-                BlurRadius="4"
-                Direction="270"
-                Opacity="0.23"
-                ShadowDepth="1"
-                Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
+
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <con:ReverseBoolToVisibilityConverter x:Key="RBVC" />
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

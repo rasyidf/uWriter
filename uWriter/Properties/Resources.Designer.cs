@@ -10,7 +10,8 @@
 
 namespace uWriter.Properties {
     using System;
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,15 +23,15 @@ namespace uWriter.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -44,7 +45,7 @@ namespace uWriter.Properties {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -58,16 +59,25 @@ namespace uWriter.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to wts.ItemName.
+        ///   Looks up a localized string similar to uWriter.
         /// </summary>
         public static string AppDisplayName {
             get {
                 return ResourceManager.GetString("AppDisplayName", resourceCulture);
             }
         }
-    
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BETA.
+        /// </summary>
+        public static string AppStatus {
+            get {
+                return ResourceManager.GetString("AppStatus", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Dashboard.
         /// </summary>
@@ -76,70 +86,7 @@ namespace uWriter.Properties {
                 return ResourceManager.GetString("DashboardPageTitle", resourceCulture);
             }
         }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Dashboard.
-        /// </summary>
-        public static string ShellDashboardPage {
-            get {
-                return ResourceManager.GetString("ShellDashboardPage", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Write.
-        /// </summary>
-        public static string WritePageTitle {
-            get {
-                return ResourceManager.GetString("WritePageTitle", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Write.
-        /// </summary>
-        public static string ShellWritePage {
-            get {
-                return ResourceManager.GetString("ShellWritePage", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Plot.
-        /// </summary>
-        public static string PlotPageTitle {
-            get {
-                return ResourceManager.GetString("PlotPageTitle", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Plot.
-        /// </summary>
-        public static string ShellPlotPage {
-            get {
-                return ResourceManager.GetString("ShellPlotPage", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Outline.
-        /// </summary>
-        public static string OutlinePageTitle {
-            get {
-                return ResourceManager.GetString("OutlinePageTitle", resourceCulture);
-            }
-        }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Outline.
-        /// </summary>
-        public static string ShellOutlinePage {
-            get {
-                return ResourceManager.GetString("ShellOutlinePage", resourceCulture);
-            }
-        }
-    
+        
         /// <summary>
         ///   Looks up a localized string similar to Organize.
         /// </summary>
@@ -148,34 +95,25 @@ namespace uWriter.Properties {
                 return ResourceManager.GetString("OrganizePageTitle", resourceCulture);
             }
         }
-    
+        
         /// <summary>
-        ///   Looks up a localized string similar to Organize.
+        ///   Looks up a localized string similar to Outline.
         /// </summary>
-        public static string ShellOrganizePage {
+        public static string OutlinePageTitle {
             get {
-                return ResourceManager.GetString("ShellOrganizePage", resourceCulture);
+                return ResourceManager.GetString("OutlinePageTitle", resourceCulture);
             }
         }
-    
+        
         /// <summary>
-        ///   Looks up a localized string similar to Schedule.
+        ///   Looks up a localized string similar to Plot.
         /// </summary>
-        public static string SchedulePageTitle {
+        public static string PlotPageTitle {
             get {
-                return ResourceManager.GetString("SchedulePageTitle", resourceCulture);
+                return ResourceManager.GetString("PlotPageTitle", resourceCulture);
             }
         }
-    
-        /// <summary>
-        ///   Looks up a localized string similar to Schedule.
-        /// </summary>
-        public static string ShellSchedulePage {
-            get {
-                return ResourceManager.GetString("ShellSchedulePage", resourceCulture);
-            }
-        }
-    
+        
         /// <summary>
         ///   Looks up a localized string similar to Publish.
         /// </summary>
@@ -184,79 +122,79 @@ namespace uWriter.Properties {
                 return ResourceManager.GetString("PublishPageTitle", resourceCulture);
             }
         }
-    
+        
         /// <summary>
-        ///   Looks up a localized string similar to Publish.
+        ///   Looks up a localized string similar to Schedule.
         /// </summary>
-        public static string ShellPublishPage {
+        public static string SchedulePageTitle {
             get {
-                return ResourceManager.GetString("ShellPublishPage", resourceCulture);
+                return ResourceManager.GetString("SchedulePageTitle", resourceCulture);
             }
         }
-    
+        
         /// <summary>
-            ///   Looks up a localized string similar to Settings page placeholder text.  Your app description goes here..
-            /// </summary>
-            public static string SettingsPageAboutText {
-                get {
-                    return ResourceManager.GetString("SettingsPageAboutText", resourceCulture);
-                }
+        ///   Looks up a localized string similar to Settings page placeholder text.  Your app description goes here..
+        /// </summary>
+        public static string SettingsPageAboutText {
+            get {
+                return ResourceManager.GetString("SettingsPageAboutText", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to About this application.
-            /// </summary>
-            public static string SettingsPageAboutTitle {
-                get {
-                    return ResourceManager.GetString("SettingsPageAboutTitle", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About this application.
+        /// </summary>
+        public static string SettingsPageAboutTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageAboutTitle", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to Choose Theme.
-            /// </summary>
-            public static string SettingsPageChooseThemeText {
-                get {
-                    return ResourceManager.GetString("SettingsPageChooseThemeText", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose Theme.
+        /// </summary>
+        public static string SettingsPageChooseThemeText {
+            get {
+                return ResourceManager.GetString("SettingsPageChooseThemeText", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to Personalization.
-            /// </summary>
-            public static string SettingsPagePersonalizationTitle {
-                get {
-                    return ResourceManager.GetString("SettingsPagePersonalizationTitle", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personalization.
+        /// </summary>
+        public static string SettingsPagePersonalizationTitle {
+            get {
+                return ResourceManager.GetString("SettingsPagePersonalizationTitle", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to Privacy Statement.
-            /// </summary>
-            public static string SettingsPagePrivacyStatementText {
-                get {
-                    return ResourceManager.GetString("SettingsPagePrivacyStatementText", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Statement.
+        /// </summary>
+        public static string SettingsPagePrivacyStatementText {
+            get {
+                return ResourceManager.GetString("SettingsPagePrivacyStatementText", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to Dark.
-            /// </summary>
-            public static string SettingsPageRadioButtonDarkTheme {
-                get {
-                    return ResourceManager.GetString("SettingsPageRadioButtonDarkTheme", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string SettingsPageRadioButtonDarkTheme {
+            get {
+                return ResourceManager.GetString("SettingsPageRadioButtonDarkTheme", resourceCulture);
             }
-    
-            /// <summary>
-            ///   Looks up a localized string similar to Light.
-            /// </summary>
-            public static string SettingsPageRadioButtonLightTheme {
-                get {
-                    return ResourceManager.GetString("SettingsPageRadioButtonLightTheme", resourceCulture);
-                }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        public static string SettingsPageRadioButtonLightTheme {
+            get {
+                return ResourceManager.GetString("SettingsPageRadioButtonLightTheme", resourceCulture);
             }
-    
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
@@ -265,13 +203,85 @@ namespace uWriter.Properties {
                 return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
             }
         }
-    
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        public static string ShellDashboardPage {
+            get {
+                return ResourceManager.GetString("ShellDashboardPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organize.
+        /// </summary>
+        public static string ShellOrganizePage {
+            get {
+                return ResourceManager.GetString("ShellOrganizePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outline.
+        /// </summary>
+        public static string ShellOutlinePage {
+            get {
+                return ResourceManager.GetString("ShellOutlinePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plot.
+        /// </summary>
+        public static string ShellPlotPage {
+            get {
+                return ResourceManager.GetString("ShellPlotPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publish.
+        /// </summary>
+        public static string ShellPublishPage {
+            get {
+                return ResourceManager.GetString("ShellPublishPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schedule.
+        /// </summary>
+        public static string ShellSchedulePage {
+            get {
+                return ResourceManager.GetString("ShellSchedulePage", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string ShellSettingsPage {
             get {
                 return ResourceManager.GetString("ShellSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write.
+        /// </summary>
+        public static string ShellWritePage {
+            get {
+                return ResourceManager.GetString("ShellWritePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write.
+        /// </summary>
+        public static string WritePageTitle {
+            get {
+                return ResourceManager.GetString("WritePageTitle", resourceCulture);
             }
         }
     }

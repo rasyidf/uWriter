@@ -47,18 +47,7 @@
             </Button>
         </controls:WindowCommands>
     </controls:MetroWindow.LeftWindowCommands>
-    <controls:MetroWindow.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Styles/ShellStyles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="{x:Type controls:SplitView}">
-                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-            </Style>
-            <con:ReverseBoolToVisibilityConverter x:Key="RBVC" />
-        </ResourceDictionary>
 
-    </controls:MetroWindow.Resources>
     <controls:MetroWindow.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -67,45 +56,28 @@
             <Grid.Resources />
             <controls:HamburgerMenu
                 x:Name="Navs"
-                CompactPaneLength="36"
-                ContentTransition="Up"
-                DisplayMode="Overlay"
-                Focusable="False"
-                HamburgerButtonTemplate="{DynamicResource HamburgerButtonStyle}"
-                HamburgerHeight="36"
-                HamburgerMenuHeaderTemplate="{DynamicResource HamburgerMenuHeaderStyle}"
-                HamburgerWidth="36"
                 IsPaneOpen="{Binding IsPaneOpen}"
                 ItemCommand="{Binding MenuItemInvokedCommand}"
-                ItemTemplate="{StaticResource HamburgerMenuItem}"
-                ItemTemplateSelector="{StaticResource MenuItemTemplateSelector}"
                 ItemsSource="{Binding MenuItems}"
                 OptionsItemCommand="{Binding OptionsMenuItemInvokedCommand}"
-                OptionsItemTemplate="{StaticResource HamburgerOptionsMenuItem}"
-                OptionsItemTemplateSelector="{StaticResource MenuItemTemplateSelector}"
                 OptionsItemsSource="{Binding OptionMenuItems}"
                 SelectedItem="{Binding SelectedMenuItem}"
                 SelectedOptionsItem="{Binding SelectedOptionsMenuItem}"
                 Style="{StaticResource HamburgerMenuCreatorsStyle}">
                 <controls:HamburgerMenu.Content>
-                    <ContentControl x:Name="hamburgerMenuContentControl" Focusable="False" />
+                    <Grid>
+                        <ContentControl x:Name="hamburgerMenuContentControl" Focusable="False" />
+                        <Rectangle Fill="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Visibility="{Binding IsPaneOpen, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </Grid>
                 </controls:HamburgerMenu.Content>
             </controls:HamburgerMenu>
 
             <Button
-                Width="36"
-                Height="36"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="{DynamicResource MahApps.Brushes.Window.Background}"
-                Click="Hamburger_Click"
-                Content="&#xE700;"
-                FontFamily="Segoe MDL2 Assets"
-                FontSize="14"
-                Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                Style="{DynamicResource MahApps.Styles.Button.Hamburger}"
+                Command="{Binding HamburgerOpenCommand}"
+                Style="{DynamicResource Rasyidf.Styles.Button.Hamburger}"
                 Visibility="{Binding IsPaneOpen, Converter={StaticResource RBVC}}" />
 
         </Grid>
     </controls:MetroWindow.Content>
+
 </controls:MetroWindow>

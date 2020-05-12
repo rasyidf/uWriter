@@ -26,6 +26,7 @@ namespace uWriter.ViewModels
         private ICommand _menuItemInvokedCommand;
         private ICommand _optionsMenuItemInvokedCommand;
         private bool _IsPaneOpen;
+        private ICommand _hamburgerOpenCommand;
 
         public bool IsPaneOpen
         {
@@ -62,7 +63,12 @@ namespace uWriter.ViewModels
         };
 
         public DelegateCommand GoBackCommand => _goBackCommand ?? (_goBackCommand = new DelegateCommand(OnGoBack, CanGoBack));
+        public ICommand HamburgerOpenCommand => _hamburgerOpenCommand ?? (_hamburgerOpenCommand = new DelegateCommand(OnHamburgerOpen));
 
+        private void OnHamburgerOpen()
+        {
+            IsPaneOpen = !IsPaneOpen;
+        }
         public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new DelegateCommand(OnLoaded));
 
         public ICommand UnloadedCommand => _unloadedCommand ?? (_unloadedCommand = new DelegateCommand(OnUnloaded));
