@@ -27,6 +27,13 @@
                 Margin="12,0,0,0"
                 Style="{StaticResource PageTitleStyle}"
                 Text="{x:Static properties:Resources.WritePageTitle}" />
+            <Button
+                Grid.Column="1"
+                Width="36"
+                HorizontalAlignment="Right"
+                Command="{Binding ZenModeCommand}">
+                <TextBlock Style="{StaticResource SmallIconStyle}" Text="&#xE740;" />
+            </Button>
         </Grid>
         <Grid
             Grid.Row="1"

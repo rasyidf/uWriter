@@ -69,9 +69,9 @@ namespace uWriter.ViewModels
         {
             IsPaneOpen = !IsPaneOpen;
         }
-        public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new DelegateCommand(OnLoaded));
+        public ICommand LoadedCommand => _loadedCommand ??= new DelegateCommand(OnLoaded);
 
-        public ICommand UnloadedCommand => _unloadedCommand ?? (_unloadedCommand = new DelegateCommand(OnUnloaded));
+        public ICommand UnloadedCommand => _unloadedCommand ??= new DelegateCommand(OnUnloaded);
 
         public ICommand MenuItemInvokedCommand => _menuItemInvokedCommand ?? (_menuItemInvokedCommand = new DelegateCommand(OnMenuItemInvoked));
 
