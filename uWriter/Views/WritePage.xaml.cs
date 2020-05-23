@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace uWriter.Views
 {
@@ -7,6 +8,11 @@ namespace uWriter.Views
         public WritePage()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_SizeChanged(object sender, System.Windows.SizeChangedEventArgs e)
+        {
+       
         }
     }
 }

@@ -9,4 +9,5 @@
         <Setter Property="BorderThickness" Value="0,0,0,1" />
         <Setter Property="Effect" Value="{DynamicResource DropShadowHeaderStyle}" />
     </Style>
+
 </ResourceDictionary>

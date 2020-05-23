@@ -45,7 +45,10 @@
                 Text="{x:Static properties:Resources.SettingsPagePersonalizationTitle}" />
             <StackPanel Margin="{StaticResource SmallTopBottomMargin}">
                 <TextBlock Style="{StaticResource BodyTextStyle}" Text="{x:Static properties:Resources.SettingsPageChooseThemeText}" />
-                <StackPanel Margin="{StaticResource XSmallTopMargin}">
+                <StackPanel
+                    Width="200"
+                    Margin="{StaticResource SmallLeftTopRightBottomMargin}"
+                    HorizontalAlignment="Left">
                     <RadioButton
                         Content="{x:Static properties:Resources.SettingsPageRadioButtonLightTheme}"
                         FontSize="{StaticResource MediumFontSize}"
@@ -70,6 +73,8 @@
                         </i:Interaction.Triggers>
                     </RadioButton>
                 </StackPanel>
+                <TextBlock Style="{StaticResource BodyTextStyle}" Text="{x:Static properties:Resources.ShellOutlinePage}" />
+
             </StackPanel>
 
             <TextBlock

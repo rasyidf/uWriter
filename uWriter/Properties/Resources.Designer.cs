@@ -79,7 +79,7 @@ namespace uWriter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dashboard.
+        ///   Looks up a localized string similar to uWriter.
         /// </summary>
         public static string DashboardPageTitle {
             get {

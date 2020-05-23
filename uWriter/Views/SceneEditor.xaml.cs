@@ -22,5 +22,17 @@ namespace uWriter.Views
         {
             InitializeComponent();
         }
+
+        private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (e.NewSize.Width <= 780)
+            {
+                VisualStateManager.GoToState(this, "HideToolbar", true);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "ShowToolbar", true);
+            }
+        }
     }
 }

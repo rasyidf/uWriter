@@ -11,11 +11,12 @@
     xmlns:properties="clr-namespace:uWriter.Properties"
     xmlns:templateSelectors="clr-namespace:uWriter.TemplateSelectors"
     Title="{x:Static properties:Resources.AppDisplayName}"
+    MinWidth="600"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Style="{DynamicResource MahApps.Styles.MetroWindow.Clean}"
     TitleCharacterCasing="Normal"
     mc:Ignorable="d">
-
+    
     <controls:MetroWindow.WindowButtonCommands>
         <controls:WindowButtonCommands Style="{DynamicResource MahApps.Styles.WindowButtonCommands.Clean.Win10}" />
     </controls:MetroWindow.WindowButtonCommands>

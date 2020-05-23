@@ -33,6 +33,9 @@
         <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{DynamicResource MahApps.Brushes.Accent3}" />
         <Setter Property="controls:ControlsHelper.FocusBorderThickness" Value="2" />
     </Style>
+    <Style BasedOn="{StaticResource MahApps.Styles.ProgressBar}" TargetType="ProgressBar">
+        <Setter Property="MinHeight" Value="2" />
+    </Style>
 
     <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">
         <Setter Property="Control.Template">
@@ -79,18 +82,24 @@
         Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
 
     <DropShadowEffect
-        x:Key="DropShadowHeaderStyle2"
-        BlurRadius="3"
+        x:Key="DropShadowCardStyle"
+        BlurRadius="5"
         Direction="270"
-        Opacity="0.5"
+        Opacity="0.2"
         RenderingBias="Quality"
-        ShadowDepth="1"
+        ShadowDepth="0"
         Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
 
     <Style x:Key="HeaderBorderStyle" TargetType="{x:Type Border}">
         <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Window.Background}" />
         <Setter Property="BorderThickness" Value="0,0,0,1" />
         <Setter Property="Effect" Value="{DynamicResource DropShadowHeaderStyle}" />
+    </Style>
+    <Style x:Key="CardStyle" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Window.Background}" />
+        <Setter Property="BorderThickness" Value="0.5" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="Effect" Value="{DynamicResource DropShadowCardStyle}" />
     </Style>
     <!--  This is the template for all menu items. In this sample we use the glyph items.  -->
     <DataTemplate x:Key="HamburgerMenuItem" DataType="{x:Type controls:HamburgerMenuGlyphItem}">
