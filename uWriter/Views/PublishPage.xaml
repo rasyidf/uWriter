@@ -28,14 +28,48 @@
                 Style="{StaticResource PageTitleStyle}"
                 Text="{x:Static properties:Resources.PublishPageTitle}" />
         </Grid>
-        <Grid
-            Grid.Row="1"
+
+        <WrapPanel Grid.Row="1"
             Margin="{StaticResource XSmallLeftTopRightBottomMargin}"
             Background="{DynamicResource MahApps.Brushes.Gray10}">
+
+                <Border Style="{DynamicResource CardStyle}" Margin="4"
+                    Width="165"
+                    Height="199"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"
+                    Height="199" Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"
+                    Height="199"  Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"  Margin="4"
+                    Height="199"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+
+        </WrapPanel>
             <!--
                 The Mahapps Gray10 color represents where you should place your content.
                 Place your content here.
-            -->
-        </Grid>
+            --> 
     </Grid>
 </UserControl>

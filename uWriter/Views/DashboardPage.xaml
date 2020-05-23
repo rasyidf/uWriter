@@ -107,7 +107,50 @@
                     </Border>
                 </StackPanel>
             </Grid>
-            <Grid Background="{DynamicResource MahApps.Brushes.Gray10}" DockPanel.Dock="Left" />
+            <WrapPanel Background="{DynamicResource MahApps.Brushes.Gray10}" DockPanel.Dock="Left" >
+
+                <Border Style="{DynamicResource CardStyle}" Margin="4"
+                        Width="165"
+                        Height="199"
+                        Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                        BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"
+                    Height="199" Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"
+                    Height="199"  Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"  Margin="4"
+                    Height="199"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+                <Border Style="{DynamicResource CardStyle}"
+                    Width="165"  Margin="4"
+                    Height="199"
+                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    BorderThickness=".1"
+                        >
+                    <Grid/>
+                </Border>
+
+            </WrapPanel>
         </DockPanel>
         <Border Style="{DynamicResource HeaderBorderStyle}" />
         <Grid>
