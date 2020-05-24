@@ -36,7 +36,7 @@
             FontFamily="Fira Sans ExtraLight"
             FontSize="14"
             LineHeight="Auto"
-            Text="0 WORDS / 0 CHARACTERS / 00:00 READING TIME"
+            Text="5 WORDS / 35 CHARACTERS / 00:02 READING TIME"
             TextAlignment="Center" />
     </Grid>
     <VisualStateManager.VisualStateGroups>
