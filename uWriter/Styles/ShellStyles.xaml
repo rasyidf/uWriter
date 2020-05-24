@@ -79,7 +79,7 @@
         Direction="270"
         Opacity="0.23"
         ShadowDepth="1"
-        Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
+        Color="{DynamicResource MahApps.Colors.MenuShadow}" />
 
     <DropShadowEffect
         x:Key="DropShadowCardStyle"
@@ -88,7 +88,7 @@
         Opacity="0.2"
         RenderingBias="Quality"
         ShadowDepth="0"
-        Color="{DynamicResource MahApps.Colors.SystemBaseHigh}" />
+        Color="{DynamicResource MahApps.Colors.MenuShadow}" />
 
     <Style x:Key="HeaderBorderStyle" TargetType="{x:Type Border}">
         <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Window.Background}" />

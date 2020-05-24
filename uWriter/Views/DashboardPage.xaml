@@ -34,7 +34,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
                     Style="{StaticResource PageTitleStyle}"
-                    Text="John Doe" />
+                    Text="Pausbiru" />
                 <StackPanel
                     Margin="10,155,10,10"
                     Orientation="Vertical"
@@ -42,7 +42,7 @@
                     <Border
                         Width="330"
                         Height="74"
-                        Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                        Background="{DynamicResource MahApps.Brushes.Window.Background}"
                         BorderThickness=".1"
                         Style="{DynamicResource CardStyle}">
                         <Grid>
@@ -69,7 +69,7 @@
                         Width="330"
                         Height="208"
                         Margin="{StaticResource SmallTopMargin}"
-                        Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                        Background="{DynamicResource MahApps.Brushes.Window.Background}"
                         BorderThickness=".1"
                         Style="{DynamicResource CardStyle}">
                         <Grid>
@@ -110,41 +110,25 @@
             <WrapPanel Background="{DynamicResource MahApps.Brushes.Gray10}" DockPanel.Dock="Left" >
 
                 <Border Style="{DynamicResource CardStyle}" Margin="4"
-                        Width="165"
-                        Height="199"
-                        Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                        Width="248"
+                        Height="215"
+                        Background="{DynamicResource MahApps.Brushes.Window.Background}"
                         BorderThickness=".1"
                         >
                     <Grid/>
                 </Border>
                 <Border Style="{DynamicResource CardStyle}"
-                    Width="165"
-                    Height="199" Margin="4"
-                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    Width="247"
+                    Height="215" Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.Window.Background}"
                     BorderThickness=".1"
                         >
                     <Grid/>
                 </Border>
                 <Border Style="{DynamicResource CardStyle}"
-                    Width="165"
-                    Height="199"  Margin="4"
-                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
-                    BorderThickness=".1"
-                        >
-                    <Grid/>
-                </Border>
-                <Border Style="{DynamicResource CardStyle}"
-                    Width="165"  Margin="4"
-                    Height="199"
-                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
-                    BorderThickness=".1"
-                        >
-                    <Grid/>
-                </Border>
-                <Border Style="{DynamicResource CardStyle}"
-                    Width="165"  Margin="4"
-                    Height="199"
-                    Background="{DynamicResource MahApps.Brushes.SystemControlBackgroundChromeWhite}"
+                    Width="248"
+                    Height="215"  Margin="4"
+                    Background="{DynamicResource MahApps.Brushes.Window.Background}"
                     BorderThickness=".1"
                         >
                     <Grid/>
@@ -163,6 +147,7 @@
                 Margin="12,0,0,0"
                 Style="{StaticResource PageTitleStyle}"
                 Text="{x:Static properties:Resources.DashboardPageTitle}" />
+            <Button Style="{DynamicResource MahApps.Styles.Button.ToolBar}" Content="New" Grid.Column="1" Margin="0,2,3,3" HorizontalAlignment="Right" Width="90"/>
         </Grid>
     </Grid>
 </UserControl>
