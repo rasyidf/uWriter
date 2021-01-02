@@ -12,8 +12,8 @@
 <div align="center">
   <!-- Stability -->
   <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
-    <img src="https://img.shields.io/badge/status-beta-blue.svg?style=flat-square"
-      alt="Beta" />
+    <img src="https://img.shields.io/badge/status-alpha-blue.svg?style=flat-square"
+      alt="Alpha" />
   </a>
     
   <!-- Standard -->
